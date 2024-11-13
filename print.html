@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanishk Gupta - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Print-specific styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            a {
+                text-decoration: none !important;
+                color: #000 !important;
+            }
+        }
+
+        /* General styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #000;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        .header h2 {
+            margin: 5px 0;
+            font-size: 20px;
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .contact-info span {
+            margin: 0 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .experience-item {
+            margin-bottom: 15px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .position {
+            font-weight: 500;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 3px;
+            font-size: 14px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-category {
+            margin-bottom: 10px;
+        }
+
+        .skill-category h4 {
+            margin: 0 0 5px 0;
+            color: #34495e;
+            font-size: 16px;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3498db;
+        }
+
+        .company-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .experience-header {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Update contact info styles */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Adjust section margins for better fit */
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .experience-item {
+            margin-bottom: 12px;
+        }
+
+        li {
+            font-size: 12px;
+            margin-bottom: 2px;
+            line-height: 1.4;
+        }
+
+        /* Add these updated styles */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #2c3e50;
+            --light-gray: #f5f6fa;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Enhanced Header */
+        .header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+            background: transparent;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text-section h1 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .text-section h2 {
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        /* Improved Contact Info */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-color);
+        }
+
+        /* Enhanced Section Titles */
+        .section-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--secondary-color);
+            position: relative;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            background: white;
+            border: 1px solid #eee;
+            transition: transform 0.2s ease;
+        }
+
+        .experience-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .company-logo {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            padding: 5px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .company {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+
+        .date {
+            margin-left: auto;
+            color: var(--secondary-color);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .position {
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        .skill-category {
+            background: var(--light-gray);
+            padding: 15px;
+            border-radius: var(--border-radius);
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 15px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+
+        /* List Styling */
+        ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #34495e;
+        }
+
+        /* Print Button Enhancement */
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .print-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Professional Summary Enhancement */
+        .professional-summary {
+            background: var(--light-gray);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 25px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Domain Expertise Enhancement */
+        .domain-expertise li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .domain-expertise li:last-child {
+            border-bottom: none;
+        }
+
+        /* Print Media Queries */
+        @media print {
+            body {
+                padding: 20mm;
+                box-shadow: none;
+            }
+
+            .experience-item {
+                break-inside: avoid;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+        }
+
+        /* Add to your existing styles */
+        .print-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.9;
+        }
+
+        .print-button:hover {
+            opacity: 1;
+        }
+
+        .print-icon {
+            font-size: 18px;
+        }
+
+        /* Loading indicator styles */
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .loading .print-text {
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Print media query update */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            
+            /* Ensure proper page breaks */
+            .experience-item, .section {
+                page-break-inside: avoid;
+            }
+            
+            /* Ensure background colors and images print */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+
+        .resume-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            position: relative;
+        }
+
+        @media screen {
+            .resume-container {
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                margin: 20px auto;
+                padding: 30px;
+            }
+        }
+
+        @media print {
+            .resume-container {
+                padding: 0;
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .print-icon {
+            font-size: 18px;
+        }
+
+        /* Loading state animation */
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .print-button.loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .print-button.loading .print-text {
+            animation: pulse 1.5s infinite;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* Update these styles */
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+
+        /* Adjust spacing and layout for better content flow */
+        .section {
+            margin-bottom: 15px;  /* Reduced from 20px */
+            page-break-inside: auto !important; /* Allow content to flow */
+        }
+
+        .experience-item {
+            margin-bottom: 12px;  /* Reduced from 15px */
+            padding: 12px;        /* Reduced padding */
+            page-break-inside: auto !important;
+        }
+
+        /* Adjust header spacing */
+        .header {
+            margin-bottom: 15px;  /* Reduced from 25px */
+            padding-bottom: 15px; /* Reduced from 20px */
+        }
+
+        /* Adjust contact info spacing */
+        .contact-info {
+            margin-bottom: 15px;  /* Reduced from 25px */
+            padding: 10px;        /* Reduced from 15px */
+        }
+
+        /* Adjust text sizes for better fit */
+        .text-section h1 {
+            font-size: 28px;      /* Reduced from 32px */
+        }
+
+        .text-section h2 {
+            font-size: 16px;      /* Reduced from 18px */
+        }
+
+        /* Adjust section titles */
+        .section-title {
+            font-size: 18px;      /* Reduced from 20px */
+            margin-bottom: 10px;  /* Reduced from 15px */
+            padding-bottom: 5px;  /* Reduced from 8px */
+        }
+
+        /* Update print media queries */
+        @media print {
+            body {
+                padding: 15mm !important;
+            }
+
+            /* Remove forced page breaks */
+            .section, 
+            .experience-item, 
+            .skills-grid {
+                page-break-inside: auto !important;
+                break-inside: auto !important;
+            }
+
+            /* Only force page breaks where absolutely necessary */
+            .skills-section {
+                page-break-before: auto;
+            }
+
+            /* Adjust spacing for print */
+            .experience-item {
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+
+            /* Ensure content flows properly */
+            * {
+                overflow: visible !important;
+            }
+        }
+
+        /* Adjust list spacing */
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 2px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        /* Optional: Add hover effect for screen viewing */
+        @media screen {
+            .profile-pic {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .profile-pic:hover {
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+            }
+        }
+
+        /* Ensure background removal persists in print */
+        @media print {
+            .profile-pic {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background: none !important;
+            }
+            
+            .profile-section {
+                background: none !important;
+            }
+        }
+
+        /* Font size variables for consistency */
+        :root {
+            --font-xl: 28px;     /* Main heading */
+            --font-lg: 18px;     /* Section titles */
+            --font-md: 14px;     /* Company names */
+            --font-sm: 13px;     /* Regular text */
+            --font-xs: 12px;     /* Dates and secondary info */
+            
+            --line-height-lg: 1.6;
+            --line-height-sm: 1.4;
+        }
+
+        /* Header text */
+        .text-section h1 {
+            font-size: var(--font-xl);
+            line-height: 1.2;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .text-section h2 {
+            font-size: var(--font-lg);
+            line-height: var(--line-height-sm);
+            color: var(--secondary-color);
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        /* Contact info */
+        .contact-info span {
+            font-size: var(--font-xs);
+            line-height: var(--line-height-sm);
+        }
+
+        /* Section titles */
+        .section-title {
+            font-size: var(--font-lg);
+            line-height: var(--line-height-sm);
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+        }
+
+        /* Professional Summary */
+        .professional-summary p {
+            font-size: var(--font-sm);
+            line-height: var(--line-height-lg);
+            margin: 0;
+        }
+
+        /* Experience items */
+        .company {
+            font-size: var(--font-md);
+            font-weight: 600;
+            line-height: var(--line-height-sm);
+        }
+
+        .position {
+            font-size: var(--font-sm);
+            font-weight: 500;
+            line-height: var(--line-height-sm);
+            margin: 4px 0;
+        }
+
+        .date {
+            font-size: var(--font-xs);
+            color: var(--secondary-color);
+        }
+
+        /* List items */
+        li {
+            font-size: var(--font-sm);
+            line-height: var(--line-height-sm);
+            margin-bottom: 3px;
+        }
+
+        /* Skills section */
+        .skill-category h4 {
+            font-size: var(--font-md);
+            line-height: var(--line-height-sm);
+            margin-bottom: 8px;
+        }
+
+        .skill-category li {
+            font-size: var(--font-sm);
+            line-height: var(--line-height-sm);
+        }
+
+        /* Print button */
+        .print-button {
+            font-size: var(--font-sm);
+        }
+
+        /* Print optimization */
+        @media print {
+            body {
+                font-size: var(--font-sm);
+                line-height: var(--line-height-sm);
+            }
+            
+            /* Slightly reduce sizes for print */
+            :root {
+                --font-xl: 26px;
+                --font-lg: 16px;
+                --font-md: 13px;
+                --font-sm: 12px;
+                --font-xs: 11px;
+            }
+        }
+
+        /* Ensure consistent spacing */
+        .experience-item {
+            margin-bottom: 15px;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* List spacing */
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        /* Skill grid spacing */
+        .skills-grid {
+            gap: 15px;
+        }
+
+        .skill-category {
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" id="printButton">
+        <span class="print-icon">🖨️</span>
+        <span class="print-text">Print Resume</span>
+    </button>
+
+    <div class="header">
+        <div class="profile-section">
+            <img src="images/self.jpeg" alt="Kanishk Gupta" class="profile-pic">
+        </div>
+        <div class="text-section">
+            <h1>Kanishk Gupta</h1>
+            <h2>Lead Operational Excellence Specialist</h2>
+        </div>
+    </div>
+
+    <div class="contact-info">
+        <span>📱 +91 9560677123</span>
+        <span>📧 analyst.kanishk@gmail.com</span>
+        <span>📍 Delhi NCR, India</span>
+        <span>💼 linkedin.com/in/kanishkg</span>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">Professional Summary</h3>
+        <p>Strategic operational excellence leader with 8+ years of expertise in transforming capital markets operations through innovative automation solutions and data-driven decision making. Proven track record in implementing enterprise-wide solutions resulting in significant efficiency improvements and cost savings.</p>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">Professional Experience</h3>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <img src="images/SimCorp-logo-black.png.webp" alt="Simcorp" class="company-logo">
+                <span class="company">Simcorp India LLP</span>
+                <span class="date">Oct 2021 - Present</span>
+            </div>
+            <div class="position">Lead Operational Excellence Specialist</div>
+            <ul>
+                <li>Led enterprise-wide implementation of Agility Platform, resulting in 40% improvement in operational efficiency</li>
+                <li>Developed and deployed automated workflows reducing manual effort by 30% through KNIME and Python integration</li>
+                <li>Established comprehensive KPI framework for real-time performance tracking across global operations</li>
+                <li>Mentored team of 6 specialists in process automation and data management best practices</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <img src="images/Ameriprise_Financial_logo.svg.png" alt="Ameriprise" class="company-logo">
+                <span class="company">Ameriprise India LLP</span>
+                <span class="date">Feb 2019 - Oct 2021</span>
+            </div>
+            <div class="position">Senior Associate</div>
+            <ul>
+                <li>Managed configuration of 50+ financial instruments ensuring 99.9% data accuracy</li>
+                <li>Reduced processing time by 40% through implementation of Python and SQL automation solutions</li>
+                <li>Successfully transitioned complex business processes from North America, training 4 FTEs</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <img src="images/ketmox.png" alt="Ketmox" class="company-logo">
+                <span class="company">Ketmox Business Services Private Limited</span>
+                <span class="date">May 2016 - Feb 2019</span>
+            </div>
+            <div class="position">Research Analyst</div>
+            <ul>
+                <li>Optimized database architecture improving query performance by 25%</li>
+                <li>Developed trading algorithms for real-time market analysis and decision support</li>
+                <li>Created comprehensive analytical dashboards for institutional clients</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">Technical Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming & Development</h4>
+                <ul>
+                    <li>Python (Advanced data analysis, automation)</li>
+                    <li>SQL (Complex queries, optimization)</li>
+                    <li>PowerShell & VBA</li>
+                    <li>REST APIs Integration</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Tools & Platforms</h4>
+                <ul>
+                    <li>KNIME Analytics Platform</li>
+                    <li>Kofax Total Agility</li>
+                    <li>Bloomberg Terminal</li>
+                    <li>Power BI & Tableau</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">Domain Expertise</h3>
+        <ul>
+            <li>Financial Data Management: Securities master data, pricing data, corporate actions processing</li>
+            <li>Process Optimization: Workflow analysis, automation strategy, efficiency improvements</li>
+            <li>Risk Management: Data quality control, compliance monitoring, risk assessment</li>
+            <li>Team Leadership: Project management, team mentoring, stakeholder communication</li>
+        </ul>
+    </div>
+
+    <script>
+        // Wait for all resources to load
+        window.addEventListener('load', function() {
+            const printButton = document.getElementById('printButton');
+            
+            // Function to check if all images are loaded
+            function areImagesLoaded() {
+                const images = document.getElementsByTagName('img');
+                for (let img of images) {
+                    if (!img.complete) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            // Function to handle printing
+            function handlePrint() {
+                // Add loading state
+                printButton.classList.add('loading');
+                
+                if (areImagesLoaded()) {
+                    window.print();
+                    printButton.classList.remove('loading');
+                } else {
+                    // Wait for images to load
+                    setTimeout(handlePrint, 500);
+                }
+            }
+
+            // Print button handler
+            printButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                handlePrint();
+            });
+        });
+    </script>
+</body>
+</html> 
