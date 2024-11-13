@@ -302,6 +302,65 @@
       font-size: 0.85rem;  /* 13.6px */
       font-weight: 500;
     }
+    /* Mobile-friendly adjustments */
+    .timeline-item {
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .logo-container {
+      min-width: 120px;
+      display: flex;
+      align-items: center;
+    }
+
+    .experience-logo {
+      max-height: 40px;
+      width: 100px;
+      margin-right: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px;
+      border-radius: 6px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .certification-details,
+    .education-details {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item {
+        padding: 20px;
+      }
+
+      .timeline-item h3 {
+        font-size: 1.1rem;
+      }
+
+      .timeline-item h4 {
+        font-size: 1rem;
+      }
+
+      .logo-container {
+        margin-bottom: 15px;
+      }
+
+      .timeline-date {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .achievement-list {
+        padding-left: 20px;
+      }
+
+      .achievement-list li {
+        font-size: 0.9rem;
+      }
+    }
   </style>
   <meta name="description" content="Kanishk Gupta - Lead Operational Excellence Specialist specializing in process automation and financial data management">
   <meta name="keywords" content="Kanishk Gupta, Operational Excellence, Process Automation, Financial Data Management, KNIME, SQL, Python">
@@ -639,55 +698,55 @@
     <div class="timeline">
       <!-- KNIME Advanced -->
       <div class="timeline-item">
-        <div class="d-flex align-items-center mb-3 justify-content-between">
-          <div class="d-flex align-items-center">
-            <div class="logo-container">
+        <div class="certification-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
               <img src="images/knime-logo.png" alt="KNIME Logo" class="experience-logo">
             </div>
-            <div>
+            <div class="certification-details">
               <h3>Advanced Proficiency in KNIME Analytics Platform</h3>
               <h4>KNIME</h4>
               <div class="skill-tags">
                 <span class="badge bg-primary me-2">Knime</span>
                 <span class="badge bg-primary">Data Engineering</span>
               </div>
+              <div class="timeline-date mt-2">
+                Feb 2024 - Feb 2026
+              </div>
             </div>
-          </div>
-          <div class="timeline-date text-end">
-            Feb 2024 - Feb 2026
           </div>
         </div>
       </div>
 
       <!-- KNIME Basic -->
       <div class="timeline-item">
-        <div class="d-flex align-items-center mb-3 justify-content-between">
-          <div class="d-flex align-items-center">
-            <div class="logo-container">
+        <div class="certification-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
               <img src="images/knime-logo.png" alt="KNIME Logo" class="experience-logo">
             </div>
-            <div>
+            <div class="certification-details">
               <h3>Basic Proficiency in KNIME Analytics Platform</h3>
               <h4>KNIME</h4>
               <div class="skill-tags">
                 <span class="badge bg-primary">Knime</span>
               </div>
+              <div class="timeline-date mt-2">
+                Feb 2024
+              </div>
             </div>
-          </div>
-          <div class="timeline-date text-end">
-            Feb 2024
           </div>
         </div>
       </div>
 
       <!-- Kofax Certifications -->
       <div class="timeline-item">
-        <div class="d-flex align-items-center mb-3 justify-content-between">
-          <div class="d-flex align-items-center">
-            <div class="logo-container">
+        <div class="certification-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
               <img src="images/kofax-logo.png" alt="Kofax Logo" class="experience-logo">
             </div>
-            <div>
+            <div class="certification-details">
               <h3>Kofax TotalAgility 7.10 Certifications</h3>
               <h4>Kofax</h4>
               <ul class="achievement-list">
@@ -695,10 +754,10 @@
                 <li>Explorer Skill (ID: 650d718b896c6001cfbfb40a)</li>
                 <li>Workflow Fundamentals Skill (ID: 650d92ba49ea121e49b5b18f)</li>
               </ul>
+              <div class="timeline-date mt-2">
+                Sep 2023
+              </div>
             </div>
-          </div>
-          <div class="timeline-date text-end">
-            Sep 2023
           </div>
         </div>
       </div>
@@ -712,31 +771,29 @@
     <div class="timeline">
       <!-- MBA -->
       <div class="timeline-item">
-        <div class="d-flex align-items-center mb-3 justify-content-between">
-          <div class="d-flex align-items-center">
-            <div class="logo-container">
+        <div class="education-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
               <img src="images/amity-logo.png" alt="Amity University Logo" class="experience-logo">
             </div>
-            <div>
+            <div class="education-details">
               <h3>Master of Business Administration</h3>
               <h4>Finance & Marketing</h4>
-              <p class="mb-0">Amity University</p>
+              <p class="mb-2">Amity University</p>
+              <span class="badge bg-primary">Gold Medalist (First in Academics)</span>
             </div>
-          </div>
-          <div class="timeline-date text-end">
-            <span class="badge bg-primary">Gold Medalist (First in Academics)</span>
           </div>
         </div>
       </div>
 
       <!-- BTech -->
       <div class="timeline-item">
-        <div class="d-flex align-items-center mb-3 justify-content-between">
-          <div class="d-flex align-items-center">
-            <div class="logo-container">
+        <div class="education-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
               <img src="images/niet-logo.png" alt="NIET Logo" class="experience-logo">
             </div>
-            <div>
+            <div class="education-details">
               <h3>Bachelor of Technology</h3>
               <h4>Computer Science</h4>
               <p class="mb-0">Noida Institute of Engineering and Technology,<br>Dr. A.P.J. Abdul Kalam Technical University</p>
