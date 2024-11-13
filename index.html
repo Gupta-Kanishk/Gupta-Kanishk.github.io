@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanishk Gupta – Lead Operational Excellence Specialist</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Custom styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #e8e8e8;
+      background-color: #242428;
+    }
+    .navbar {
+      background-color: #0d0d0d; 
+    }
+    .navbar-brand, .nav-link {
+      color: #e8e8e8 !important;
+    }
+    .header-section {
+      background: linear-gradient(135deg, #242448 0%, #424266 100%);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 28px;
+      color: #4bcffa;
+      margin-bottom: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(75, 207, 250, 0.2);
+    }
+    .accordion-button {
+      background-color: #333;
+      color: #4bcffa;
+      font-weight: 600;
+    }
+    .accordion-button.collapsed {
+      background-color: #29292c;
+      color: #e8e8e8;
+    }
+    .footer {
+      background-color: #0d0d0d;
+      color: #e8e8e8;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .experience-logo {
+      max-height: 40px;
+      width: 100px;
+      margin-right: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px;
+      border-radius: 6px;
+      object-fit: contain;
+      display: block;
+    }
+    .btn-custom {
+      background-color: #4bcffa;
+      color: white;
+      font-weight: 600;
+    }
+    .icon {
+      color: #4bcffa;
+      font-size: 1.2em;
+      margin-right: 8px;
+    }
+    .profile-wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 4px solid #4bcffa;
+      box-shadow: 0 0 25px rgba(75, 207, 250, 0.3);
+    }
+    .contact-info {
+      margin-top: 20px;
+    }
+    .contact-item {
+      margin: 12px 0;
+      font-size: 0.9rem;
+    }
+    .contact-item a {
+      color: #e8e8e8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact-item a:hover {
+      color: #4bcffa;
+    }
+    .lead-xl {
+      font-size: 1.5rem;
+      color: #4bcffa;
+    }
+    .timeline {
+      position: relative;
+      padding-top: 20px;
+    }
+    .timeline-item {
+      padding: 35px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-bottom: 25px;
+      border-left: 4px solid #4bcffa;
+    }
+    .timeline-date {
+      font-weight: 600;
+      color: #4bcffa;
+      white-space: nowrap;
+      margin-left: 20px;
+    }
+    .timeline-content h3 {
+      color: #e8e8e8;
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+    .timeline-content h4 {
+      color: #4bcffa;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    .achievement-list {
+      padding-left: 20px;
+    }
+    .achievement-list li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .btn-custom {
+      padding: 10px 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+    .btn-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(75, 207, 250, 0.3);
+    }
+    .logo-container {
+      min-width: 120px;
+      display: flex;
+      align-items: center;
+    }
+    /* Skills Section Styling */
+    .skill-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      height: 100%;
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(75, 207, 250, 0.1);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(75, 207, 250, 0.3);
+      box-shadow: 0 5px 15px rgba(75, 207, 250, 0.1);
+    }
+
+    .skill-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid rgba(75, 207, 250, 0.3);
+    }
+
+    .skill-icon {
+      font-size: 24px;
+      color: #4bcffa;
+      margin-right: 15px;
+    }
+
+    .skill-header h5 {
+      margin: 0;
+      color: #4bcffa;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .skill-body {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .skill-item {
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      transition: background-color 0.3s ease;
+    }
+
+    .skill-item:hover {
+      background: rgba(75, 207, 250, 0.1);
+    }
+
+    .skill-name {
+      display: block;
+      color: #4bcffa;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .skill-description {
+      font-size: 0.9rem;
+      color: #e8e8e8;
+      line-height: 1.4;
+    }
+    /* About Section Styling */
+    .about-highlight {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      height: 100%;
+      border-left: 4px solid #4bcffa;
+      transition: transform 0.3s ease;
+    }
+
+    .about-highlight:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(75, 207, 250, 0.1);
+    }
+
+    .about-highlight h4 {
+      color: #4bcffa;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .about-highlight ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .about-highlight ul li {
+      margin-bottom: 10px;
+      color: #e8e8e8;
+      line-height: 1.6;
+    }
+
+    .about-highlight .icon {
+      font-size: 24px;
+      color: #4bcffa;
+      margin-bottom: 15px;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      color: #4bcffa;
+      font-weight: 300;
+    }
+    /* Section spacing and title styling */
+    section {
+      padding: 60px 0; /* Reduced from py-5 (80px) */
+    }
+    #skills {
+      padding-top: 40px; /* Reduced top padding specifically for skills section */
+    }
+  </style>
+  <meta name="description" content="Kanishk Gupta - Lead Operational Excellence Specialist specializing in process automation and financial data management">
+  <meta name="keywords" content="Kanishk Gupta, Operational Excellence, Process Automation, Financial Data Management, KNIME, SQL, Python">
+  <meta name="author" content="Kanishk Gupta">
+  <meta property="og:title" content="Kanishk Gupta - Lead Operational Excellence Specialist">
+  <meta property="og:description" content="Specialist in process automation and financial data management with expertise in KNIME, SQL, and Python">
+  <meta property="og:image" content="images/kanishk-profile.jpg">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-center">
+          <div class="profile-wrapper">
+            <img src="images/self.jpeg" alt="Kanishk Gupta - Lead Operational Excellence Specialist" class="img-fluid rounded-circle profile-photo mb-3">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-phone icon"></i>
+                <a href="tel:+911234567890">+91 9560677123</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope icon"></i>
+                <a href="mailto:analyst.kanishk@gmail.com">analyst.kanishk@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt icon"></i>
+                <span>Delhi NCR, India</span>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-linkedin icon"></i>
+                <a href="https://www.linkedin.com/in/kanishkg/" target="_blank">LinkedIn /kanishkg</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="header-content">
+            <h1 class="display-4 fw-bold">Kanishk Gupta</h1>
+            <h2 class="lead-xl mb-4">Lead Operational Excellence Specialist</h2>
+            <p class="lead">Driving innovation in process automation and financial data management with over 8 years of expertise in capital markets.</p>
+            <div class="header-buttons mt-4">
+              <a href="#" class="btn btn-custom me-3"><i class="fas fa-file-download"></i> Download Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container py-5">
+    <h2 class="section-title"><i class="fas fa-info-circle icon"></i> About Me</h2>
+    
+    <p class="lead mb-4">A strategic operational excellence leader with over 8 years of expertise in transforming capital markets operations through innovative automation solutions and data-driven decision making.</p>
+    
+    <p>As a Lead Operational Excellence Specialist at SimCorp, I spearhead enterprise-wide transformation initiatives that bridge the gap between business objectives and technological solutions. My approach combines deep financial market knowledge with advanced automation capabilities to:</p>
+    
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="about-highlight mb-4">
+          <i class="fas fa-chart-line icon"></i>
+          <h4>Strategic Impact</h4>
+          <ul>
+            <li>Led implementation of enterprise automation platforms, resulting in 40% efficiency improvement</li>
+            <li>Developed cost optimization strategies saving $500K+ annually through process automation</li>
+            <li>Established KPI frameworks for data-driven decision making across global operations</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="about-highlight mb-4">
+          <i class="fas fa-users-cog icon"></i>
+          <h4>Leadership & Innovation</h4>
+          <ul>
+            <li>Mentor and lead cross-functional teams in adopting automation best practices</li>
+            <li>Drive cultural transformation towards data-driven operational excellence</li>
+            <li>Champion innovative solutions using KNIME, Python, and SQL for complex business challenges</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <p class="mt-4">My expertise spans the entire operational excellence lifecycle - from strategic planning and process optimization to implementation of automated workflows and change management. I consistently deliver solutions that enhance operational efficiency, improve data integrity, and drive substantial cost savings while maintaining the highest standards of accuracy and compliance.</p>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="container py-5">
+    <h2 class="section-title mb-4"><i class="fas fa-briefcase icon"></i> Professional Experience</h2>
+    <div class="timeline">
+      <!-- Current Role -->
+      <div class="timeline-item">
+        <div class="d-flex align-items-center mb-3 justify-content-between">
+          <div class="d-flex align-items-center">
+            <div class="logo-container">
+              <img src="images/SimCorp-logo-black.png.webp" alt="Simcorp Logo" class="experience-logo">
+            </div>
+            <div>
+              <h3>Lead Operational Excellence Specialist</h3>
+              <h4>Simcorp India LLP</h4>
+            </div>
+          </div>
+          <div class="timeline-date text-end">Oct 2021 - Present</div>
+        </div>
+        <ul class="achievement-list">
+          <li>Spearheaded the enterprise-wide implementation of Agility Platform, resulting in 40% improvement in operational efficiency and annual cost savings of $500K+ through streamlined workflows and reduced manual interventions</li>
+          <li>Architected and deployed end-to-end automated workflows using KNIME and Python, reducing manual effort by 30% across teams and improving data accuracy to 99.9% for critical financial processes</li>
+          <li>Established comprehensive KPI framework tracking 20+ metrics for real-time performance monitoring across global operations, enabling data-driven decision making and proactive issue resolution</li>
+          <li>Mentored and led a team of 6 specialists, implementing best practices in process automation and data management, resulting in 25% improvement in team productivity</li>
+          <li>Collaborated with global stakeholders to identify and implement process improvements, leading to 45% reduction in processing time for complex financial operations</li>
+          <li>Designed and delivered training programs for 100+ users on automation tools and best practices, achieving 90% adoption rate of new technologies</li>
+        </ul>
+      </div>
+
+      <!-- Previous Role -->
+      <div class="timeline-item">
+        <div class="d-flex align-items-center mb-3 justify-content-between">
+          <div class="d-flex align-items-center">
+            <div class="logo-container">
+              <img src="images/Ameriprise_Financial_logo.svg.png" alt="Ameriprise Logo" class="experience-logo">
+            </div>
+            <div>
+              <h3>Senior Associate</h3>
+              <h4>Ameriprise India LLP</h4>
+            </div>
+          </div>
+          <div class="timeline-date text-end">Feb 2019 - Oct 2021</div>
+        </div>
+        <ul class="achievement-list">
+          <li>Led configuration and maintenance of 50+ complex financial instruments in SimCorp Dimension, ensuring 99.9% data accuracy and compliance with regulatory requirements</li>
+          <li>Developed and implemented automated solutions using Python and SQL, reducing processing time by 40% for daily reconciliation and reporting tasks</li>
+          <li>Successfully managed transition of complex business processes from North America, training 4 FTEs and achieving 100% knowledge transfer within 3 months</li>
+          <li>Created comprehensive documentation and standard operating procedures for 15+ critical processes, reducing training time by 50% for new team members</li>
+          <li>Implemented quality control measures reducing error rates by 75% in daily operations and improving client satisfaction scores</li>
+          <li>Coordinated with global teams across time zones to ensure seamless processing of time-critical financial transactions worth $100M+ daily</li>
+        </ul>
+      </div>
+
+      <!-- First Role -->
+      <div class="timeline-item">
+        <div class="d-flex align-items-center mb-3 justify-content-between">
+          <div class="d-flex align-items-center">
+            <div class="logo-container">
+              <img src="images/ketmox.png" alt="Ketmox Logo" class="experience-logo">
+            </div>
+            <div>
+              <h3>Research Analyst</h3>
+              <h4>Ketmox Business Services Private Limited</h4>
+            </div>
+          </div>
+          <div class="timeline-date text-end">May 2016 - Feb 2019</div>
+        </div>
+        <ul class="achievement-list">
+          <li>Optimized database architecture and query performance by 25% through implementation of indexed views and stored procedures, handling data for 1000+ daily active users</li>
+          <li>Developed and maintained algorithmic trading systems processing real-time market data for 500+ securities, achieving 95% accuracy in trade signals</li>
+          <li>Created interactive analytical dashboards for institutional clients, resulting in 40% increase in client engagement and retention</li>
+          <li>Conducted detailed market research and analysis for various asset classes, producing weekly reports that informed investment decisions for portfolios worth $50M+</li>
+          <li>Automated data collection and analysis processes, reducing report generation time from 4 hours to 30 minutes while maintaining accuracy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container py-5">
+    <h2 class="section-title mb-4"><i class="fas fa-tools icon"></i> Skills</h2>
+    <div class="row g-4">
+      <!-- Technical Skills -->
+      <div class="col-md-4">
+        <div class="skill-card">
+          <div class="skill-header">
+            <i class="fas fa-laptop-code skill-icon"></i>
+            <h5>Technical Skills</h5>
+          </div>
+          <div class="skill-body">
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-description">Advanced data analysis, automation scripts, API integration, and pandas for financial data processing</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">SQL</span>
+              <div class="skill-description">Complex queries, stored procedures, database optimization, and financial reporting</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">PowerShell</span>
+              <div class="skill-description">Windows automation, batch processing, and system administration tasks</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">VBA</span>
+              <div class="skill-description">Excel macros, automated reporting, and financial model automation</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">REST APIs</span>
+              <div class="skill-description">Integration with financial data providers and internal systems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Platforms -->
+      <div class="col-md-4">
+        <div class="skill-card">
+          <div class="skill-header">
+            <i class="fas fa-cogs skill-icon"></i>
+            <h5>Tools & Platforms</h5>
+          </div>
+          <div class="skill-body">
+            <div class="skill-item">
+              <span class="skill-name">KNIME Analytics</span>
+              <div class="skill-description">End-to-end workflow automation, data integration, and predictive analytics</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Kofax Total Agility</span>
+              <div class="skill-description">Process automation, document processing, and workflow optimization</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Bloomberg Terminal</span>
+              <div class="skill-description">Market data extraction, financial analysis, and API integration</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Power BI & Tableau</span>
+              <div class="skill-description">Interactive dashboards, KPI visualization, and real-time reporting</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Git & Version Control</span>
+              <div class="skill-description">Code management, collaboration, and deployment workflows</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Domain Expertise -->
+      <div class="col-md-4">
+        <div class="skill-card">
+          <div class="skill-header">
+            <i class="fas fa-chart-line skill-icon"></i>
+            <h5>Domain Expertise</h5>
+          </div>
+          <div class="skill-body">
+            <div class="skill-item">
+              <span class="skill-name">Financial Data Management</span>
+              <div class="skill-description">Securities master data, pricing data, and corporate actions processing</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Process Optimization</span>
+              <div class="skill-description">Workflow analysis, automation strategy, and efficiency improvements</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Risk Management</span>
+              <div class="skill-description">Data quality control, compliance monitoring, and risk assessment</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Team Leadership</span>
+              <div class="skill-description">Project management, team mentoring, and stakeholder communication</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Business Analysis</span>
+              <div class="skill-description">Requirements gathering, solution design, and process documentation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and FontAwesome -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
