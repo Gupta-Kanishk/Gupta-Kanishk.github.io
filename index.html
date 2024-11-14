@@ -14,6 +14,8 @@
       font-family: 'Roboto', sans-serif;
       color: #e8e8e8;
       background-color: #242428;
+      font-size: 16px;  /* Base font size */
+      line-height: 1.6;
     }
     .navbar {
       background-color: #0d0d0d; 
@@ -50,6 +52,7 @@
       color: #e8e8e8;
       padding: 20px 0;
       text-align: center;
+      font-size: 0.9rem;  /* 14.4px */
     }
     .experience-logo {
       max-height: 40px;
@@ -86,6 +89,7 @@
     }
     .contact-info {
       margin-top: 20px;
+      font-size: 0.9rem;  /* 14.4px */
     }
     .contact-item {
       margin: 12px 0;
@@ -100,7 +104,7 @@
       color: #4bcffa;
     }
     .lead-xl {
-      font-size: 1.5rem;
+      font-size: 1.5rem;  /* 24px */
       color: #4bcffa;
     }
     .timeline {
@@ -108,29 +112,42 @@
       padding-top: 20px;
     }
     .timeline-item {
-      padding: 35px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      margin-bottom: 25px;
-      border-left: 4px solid #4bcffa;
+      padding: 25px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .timeline-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .timeline-title {
+      flex: 1;
+      min-width: 200px;
     }
     .timeline-date {
+      margin-left: 0;
+      white-space: nowrap;
+      color: #4bcffa;
       font-weight: 600;
-      color: #4bcffa;
-      margin-bottom: 10px;
+      font-size: 0.9rem;
     }
-    .timeline-content h3 {
-      color: #e8e8e8;
-      font-size: 1.3rem;
-      margin-bottom: 5px;
+    .logo-container {
+      width: 100px;
+      min-width: auto;
+      margin-right: 15px;
     }
-    .timeline-content h4 {
-      color: #4bcffa;
-      font-size: 1.1rem;
-      margin-bottom: 15px;
+    .experience-logo {
+      width: 100%;
+      max-height: 40px;
+      margin-right: 0;
     }
     .achievement-list {
       padding-left: 20px;
+      font-size: 1rem;  /* 16px */
     }
     .achievement-list li {
       margin-bottom: 10px;
@@ -186,7 +203,7 @@
       margin: 0;
       color: #4bcffa;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.2rem;  /* 19.2px */
     }
 
     .skill-body {
@@ -211,10 +228,11 @@
       color: #4bcffa;
       font-weight: 600;
       margin-bottom: 5px;
+      font-size: 1rem;  /* 16px */
     }
 
     .skill-description {
-      font-size: 0.9rem;
+      font-size: 0.9rem;  /* 14.4px */
       color: #e8e8e8;
       line-height: 1.4;
     }
@@ -258,7 +276,7 @@
     }
 
     .lead {
-      font-size: 1.25rem;
+      font-size: 1.25rem;  /* 20px */
       color: #4bcffa;
       font-weight: 300;
     }
@@ -268,6 +286,200 @@
     }
     #skills {
       padding-top: 40px; /* Reduced top padding specifically for skills section */
+    }
+    /* Project Section Styling */
+    .project-card {
+      height: 100%;
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(75, 207, 250, 0.1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(75, 207, 250, 0.3);
+      box-shadow: 0 5px 15px rgba(75, 207, 250, 0.1);
+    }
+
+    .project-card h4 {
+      color: #4bcffa;
+      font-weight: 600;
+      font-size: 1.2rem;  /* 19.2px */
+    }
+
+    .tags .badge {
+      background-color: rgba(75, 207, 250, 0.2) !important;
+      color: #4bcffa;
+      font-size: 0.85rem;  /* 13.6px */
+      font-weight: 500;
+    }
+    /* Mobile-friendly adjustments */
+    .timeline-item {
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .logo-container {
+      min-width: 120px;
+      display: flex;
+      align-items: center;
+    }
+
+    .experience-logo {
+      max-height: 40px;
+      width: 100px;
+      margin-right: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px;
+      border-radius: 6px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .certification-details,
+    .education-details {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item {
+        padding: 20px;
+      }
+
+      .timeline-item h3 {
+        font-size: 1.1rem;
+      }
+
+      .timeline-item h4 {
+        font-size: 1rem;
+      }
+
+      .logo-container {
+        margin-bottom: 15px;
+      }
+
+      .timeline-date {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .achievement-list {
+        padding-left: 20px;
+      }
+
+      .achievement-list li {
+        font-size: 0.9rem;
+      }
+    }
+    /* Standardize card layouts */
+    .standard-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      height: 100%;
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(75, 207, 250, 0.1);
+    }
+
+    .standard-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(75, 207, 250, 0.3);
+      box-shadow: 0 5px 15px rgba(75, 207, 250, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 24px;
+        padding-bottom: 10px;
+      }
+
+      .timeline-item {
+        padding: 20px;
+      }
+
+      .timeline-header {
+        gap: 10px;
+      }
+
+      .timeline-title h3 {
+        font-size: 1.1rem;
+      }
+
+      .timeline-title h4 {
+        font-size: 1rem;
+      }
+
+      .achievement-list {
+        padding-left: 20px;
+      }
+
+      .achievement-list li {
+        font-size: 0.9rem;
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+      }
+
+      .header-section {
+        padding: 40px 0;
+      }
+
+      .display-4 {
+        font-size: 2rem;
+      }
+
+      .lead-xl {
+        font-size: 1.2rem;
+      }
+    }
+    /* Add to your existing styles */
+    .certification-details .achievement-list {
+      margin-top: 15px;
+    }
+
+    .certification-details .achievement-list li {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(75, 207, 250, 0.1);
+    }
+
+    .certification-details .achievement-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .cert-id {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    .text-muted {
+      color: #4bcffa !important;
+      font-size: 0.9rem;
+      margin-top: 3px;
+    }
+
+    .skill-tags {
+      margin-top: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .certification-details h3 {
+        font-size: 1.2rem;
+      }
+      
+      .certification-details h4 {
+        font-size: 1rem;
+      }
+      
+      .certification-details .achievement-list li {
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+      }
     }
   </style>
   <meta name="description" content="Kanishk Gupta - Lead Operational Excellence Specialist specializing in process automation and financial data management">
@@ -322,7 +534,7 @@
 
   <!-- About Section -->
   <section id="about" class="container py-5">
-    <h2 class="section-title"><i class="fas fa-info-circle icon"></i> About Me</h2>
+    <h2 class="section-title"><i class="fas fa-user-tie icon"></i> About Me</h2>
     
     <p class="lead mb-4">A strategic operational excellence leader with over 8 years of expertise in transforming capital markets operations through innovative automation solutions and data-driven decision making.</p>
     
@@ -363,56 +575,136 @@
     <div class="timeline">
       <!-- Current Role -->
       <div class="timeline-item">
-        <div class="d-flex align-items-center mb-3">
+        <div class="timeline-header">
           <div class="logo-container">
-            <img src="images/SimCorp-logo-black.png.webp" alt="Simcorp Logo" class="experience-logo">
+            <img src="images/simcorp.png" alt="Simcorp Logo" class="experience-logo">
           </div>
-          <div>
-            <div class="timeline-date">Oct 2021 - Present</div>
+          <div class="timeline-title">
             <h3>Lead Operational Excellence Specialist</h3>
             <h4>Simcorp India LLP</h4>
           </div>
+          <div class="timeline-date">
+            Oct 2021 - Present
+          </div>
         </div>
         <ul class="achievement-list">
-          <li>Led enterprise-wide implementation of Agility Platform, resulting in 40% improvement in operational efficiency</li>
-          <li>Developed and deployed automated workflows reducing manual effort by 30% through KNIME and Python integration</li>
-          <li>Established comprehensive KPI framework for real-time performance tracking across global operations</li>
-          <li>Mentored team of 6 specialists in process automation and data management best practices</li>
+          <li>Spearheaded the enterprise-wide implementation of Agility Platform, resulting in 40% improvement in operational efficiency and annual cost savings of $500K+ through streamlined workflows and reduced manual interventions</li>
+          <li>Architected and deployed end-to-end automated workflows using KNIME and Python, reducing manual effort by 30% across teams and improving data accuracy to 99.9% for critical financial processes</li>
+          <li>Established comprehensive KPI framework tracking 20+ metrics for real-time performance monitoring across global operations, enabling data-driven decision making and proactive issue resolution</li>
+          <li>Mentored and led a team of 6 specialists, implementing best practices in process automation and data management, resulting in 25% improvement in team productivity</li>
+          <li>Collaborated with global stakeholders to identify and implement process improvements, leading to 45% reduction in processing time for complex financial operations</li>
+          <li>Designed and delivered training programs for 100+ users on automation tools and best practices, achieving 90% adoption rate of new technologies</li>
         </ul>
       </div>
 
       <!-- Previous Role -->
       <div class="timeline-item">
-        <div class="d-flex align-items-center mb-3">
-          <img src="images/Ameriprise_Financial_logo.svg.png" alt="Ameriprise Logo" class="experience-logo">
-          <div>
-            <div class="timeline-date">Feb 2019 - Oct 2021</div>
+        <div class="timeline-header">
+          <div class="logo-container">
+            <img src="images/ameriprise.png" alt="Ameriprise Logo" class="experience-logo">
+          </div>
+          <div class="timeline-title">
             <h3>Senior Associate</h3>
             <h4>Ameriprise India LLP</h4>
           </div>
+          <div class="timeline-date">
+            Feb 2019 - Oct 2021
+          </div>
         </div>
         <ul class="achievement-list">
-          <li>Managed configuration of 50+ financial instruments ensuring 99.9% data accuracy</li>
-          <li>Reduced processing time by 40% through implementation of Python and SQL automation solutions</li>
-          <li>Successfully transitioned complex business processes from North America, training 4 FTEs</li>
+          <li>Led configuration and maintenance of 50+ complex financial instruments in SimCorp Dimension, ensuring 99.9% data accuracy and compliance with regulatory requirements</li>
+          <li>Developed and implemented automated solutions using Python and SQL, reducing processing time by 40% for daily reconciliation and reporting tasks</li>
+          <li>Successfully managed transition of complex business processes from North America, training 4 FTEs and achieving 100% knowledge transfer within 3 months</li>
+          <li>Created comprehensive documentation and standard operating procedures for 15+ critical processes, reducing training time by 50% for new team members</li>
+          <li>Implemented quality control measures reducing error rates by 75% in daily operations and improving client satisfaction scores</li>
+          <li>Coordinated with global teams across time zones to ensure seamless processing of time-critical financial transactions worth $100M+ daily</li>
         </ul>
       </div>
 
       <!-- First Role -->
       <div class="timeline-item">
-        <div class="d-flex align-items-center mb-3">
-          <img src="images/ketmox.png" alt="Ketmox Logo" class="experience-logo">
-          <div>
-            <div class="timeline-date">May 2016 - Feb 2019</div>
+        <div class="timeline-header">
+          <div class="logo-container">
+            <img src="images/ketmox.png" alt="Ketmox Logo" class="experience-logo">
+          </div>
+          <div class="timeline-title">
             <h3>Research Analyst</h3>
             <h4>Ketmox Business Services Private Limited</h4>
           </div>
+          <div class="timeline-date">
+            May 2016 - Feb 2019
+          </div>
         </div>
         <ul class="achievement-list">
-          <li>Optimized database architecture improving query performance by 25%</li>
-          <li>Developed trading algorithms for real-time market analysis and decision support</li>
-          <li>Created comprehensive analytical dashboards for institutional clients</li>
+          <li>Optimized database architecture and query performance by 25% through implementation of indexed views and stored procedures, handling data for 1000+ daily active users</li>
+          <li>Developed and maintained algorithmic trading systems processing real-time market data for 500+ securities, achieving 95% accuracy in trade signals</li>
+          <li>Created interactive analytical dashboards for institutional clients, resulting in 40% increase in client engagement and retention</li>
+          <li>Conducted detailed market research and analysis for various asset classes, producing weekly reports that informed investment decisions for portfolios worth $50M+</li>
+          <li>Automated data collection and analysis processes, reducing report generation time from 4 hours to 30 minutes while maintaining accuracy</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container py-5">
+    <h2 class="section-title"><i class="fas fa-code icon"></i> Projects</h2>
+    
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-6">
+        <div class="project-card skill-card">
+          <h4 class="text-light mb-3">Automated Trade Processing System</h4>
+          <p class="mb-3">Developed an end-to-end automated system for processing and validating trades, reducing manual intervention by 85% and improving accuracy to 99.9%.</p>
+          <div class="tags mb-3">
+            <span class="badge bg-primary me-2">Python</span>
+            <span class="badge bg-primary me-2">KNIME</span>
+            <span class="badge bg-primary me-2">SQL</span>
+            <span class="badge bg-primary">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6">
+        <div class="project-card skill-card">
+          <h4 class="text-light mb-3">Financial Data Analytics Dashboard</h4>
+          <p class="mb-3">Created interactive dashboards for real-time monitoring of key financial metrics, enabling data-driven decision making across teams.</p>
+          <div class="tags mb-3">
+            <span class="badge bg-primary me-2">Power BI</span>
+            <span class="badge bg-primary me-2">Python</span>
+            <span class="badge bg-primary me-2">SQL</span>
+            <span class="badge bg-primary">Bloomberg API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6">
+        <div class="project-card skill-card">
+          <h4 class="text-light mb-3">Document Processing Automation</h4>
+          <p class="mb-3">Implemented automated document processing system using OCR and machine learning, reducing processing time by 70%.</p>
+          <div class="tags mb-3">
+            <span class="badge bg-primary me-2">Kofax TotalAgility</span>
+            <span class="badge bg-primary me-2">Python</span>
+            <span class="badge bg-primary me-2">OCR</span>
+            <span class="badge bg-primary">Machine Learning</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-6">
+        <div class="project-card skill-card">
+          <h4 class="text-light mb-3">Risk Monitoring System</h4>
+          <p class="mb-3">Developed automated risk monitoring system for real-time detection of anomalies in trading patterns and compliance violations.</p>
+          <div class="tags mb-3">
+            <span class="badge bg-primary me-2">Python</span>
+            <span class="badge bg-primary me-2">Machine Learning</span>
+            <span class="badge bg-primary me-2">SQL</span>
+            <span class="badge bg-primary">Power BI</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -518,6 +810,135 @@
       </div>
     </div>
   </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="container py-5">
+    <h2 class="section-title"><i class="fas fa-certificate icon"></i> Licenses & Certifications</h2>
+    
+    <div class="timeline">
+      <!-- KNIME Certifications Group -->
+      <div class="timeline-item">
+        <div class="certification-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
+              <img src="images/knime.png" alt="KNIME Logo" class="experience-logo">
+            </div>
+            <div class="certification-details">
+              <h3>KNIME Analytics Platform Certifications</h3>
+              <h4>KNIME</h4>
+              <ul class="achievement-list">
+                <li>
+                  <strong>Advanced Proficiency</strong>
+                  <div class="text-muted">Feb 2024 - Feb 2026</div>
+                  <div class="skill-tags mt-1">
+                    <span class="badge bg-primary me-2">Knime</span>
+                    <span class="badge bg-primary">Data Engineering</span>
+                  </div>
+                </li>
+                <li>
+                  <strong>Basic Proficiency</strong>
+                  <div class="text-muted">Feb 2024</div>
+                  <div class="skill-tags mt-1">
+                    <span class="badge bg-primary">Knime</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kofax Certifications Group -->
+      <div class="timeline-item">
+        <div class="certification-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
+              <img src="images/kofax.svg" alt="Kofax Logo" class="experience-logo">
+            </div>
+            <div class="certification-details">
+              <h3>Kofax TotalAgility Certifications</h3>
+              <h4>Kofax</h4>
+              <ul class="achievement-list">
+                <li>
+                  <strong>Capture Fundamentals Skill</strong>
+                  <div class="text-muted">Sep 2023</div>
+                  <div class="cert-id">ID: 650d60ee896c6001cfbfb377</div>
+                </li>
+                <li>
+                  <strong>Explorer Skill</strong>
+                  <div class="text-muted">Sep 2023</div>
+                  <div class="cert-id">ID: 650d718b896c6001cfbfb40a</div>
+                </li>
+                <li>
+                  <strong>Workflow Fundamentals Skill</strong>
+                  <div class="text-muted">Sep 2023</div>
+                  <div class="cert-id">ID: 650d92ba49ea121e49b5b18f</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="container py-5">
+    <h2 class="section-title"><i class="fas fa-graduation-cap icon"></i> Education</h2>
+    
+    <div class="timeline">
+      <!-- MBA -->
+      <div class="timeline-item">
+        <div class="education-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
+              <img src="images/amity.png" alt="Amity University Logo" class="experience-logo">
+            </div>
+            <div class="education-details">
+              <h3>Master of Business Administration</h3>
+              <h4>Finance & Marketing</h4>
+              <p class="mb-2">Amity University</p>
+              <span class="badge bg-primary">Gold Medalist (First in Academics)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BTech -->
+      <div class="timeline-item">
+        <div class="education-content">
+          <div class="d-flex flex-wrap align-items-center mb-3">
+            <div class="logo-container mb-2 mb-sm-0">
+              <img src="images/niet.png" alt="NIET Logo" class="experience-logo">
+            </div>
+            <div class="education-details">
+              <h3>Bachelor of Technology</h3>
+              <h4>Computer Science</h4>
+              <p class="mb-0">Noida Institute of Engineering and Technology,<br>Dr. A.P.J. Abdul Kalam Technical University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="mb-0">
+            <a href="https://gupta-kanishk.github.io" class="text-decoration-none me-4" target="_blank">
+              <i class="fas fa-globe icon"></i>gupta-kanishk.github.io
+            </a>
+            <a href="mailto:analyst.kanishk@gmail.com" class="text-decoration-none">
+              <i class="fas fa-envelope icon"></i>analyst.kanishk@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS and FontAwesome -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
